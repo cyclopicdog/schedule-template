@@ -1,10 +1,21 @@
 <style type="text/css">
 
-    .row-page-length {
-        min-height: 100vh;
+    .test-body {
+        box-sizing: border-box;
+        width: 90vw;
+        height: 90vh;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-items: center;
+        align-items: center;
+        background-color: cadetblue;
+        border: 5px solid cadetblue;
     }
 
     .box-body-schedule-mod {
+        width: 100%;
         height: 85vh;
         padding-top:0px;
         display: flex;
@@ -13,7 +24,7 @@
 
 
     .view-control__container {
-        padding: 0 1%;
+        width: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
     }
@@ -22,6 +33,7 @@
         width: fit-content;
         margin: .5em 0;
     }
+
     .view-control__scroll-container {
         display: flex;
         flex-flow: row nowrap;
@@ -44,7 +56,7 @@
     }
 
     .view-control__timeframe-toggle {
-        margin: .5em;
+        margin: .5em 0;
         display: flex;
         flex-flow: row nowrap;
         justify-content: right;
@@ -70,7 +82,7 @@
     }
     .schedule-window__time-frames-container {
         box-sizing: border-box;
-        height: 100%;
+        height: 97%;
         background-color: white;
     }
 
@@ -86,7 +98,6 @@
         width: 100%;
         height: 100%;
         display: grid;
-        grid-template-rows: 100%;
     }
 
     /* sd = schedule display - controls the number of columns */
@@ -111,6 +122,7 @@
         grid-template-columns: repeat(7, 1fr);
         grid-template-rows: repeat(6, 1fr);
     }
+
     .hide-schedule {
         display: none;
     }
@@ -118,35 +130,35 @@
     .schedule-window__schedule {
         width: 100%;
         height: 100%;
-        border-top: 1px solid black;
-        border-bottom: 1px solid black;
     }
 
     .schedule-window__title {
-        height: 5%;
+        height: 2.5%;
         border-bottom: 1px solid black;
         text-align: center;
         font-weight: bold;
     }
 
     .st-month {
-        position: relative;
-        top: 3%;
+        height: 14.5%;
         font-size: 0.8em;
         font-weight: bold;
+        border-left: 1px solid gray;
         border-bottom: none;
     }
 
     .schedule-window__slots-container {
+        box-sizing: border-box;
         width: 100%;
-        height: 100%;
+        height: 97%;
         position: relative;
         border-left: 1px solid gray;
+        border-bottom: 1px solid black;
         background-color: white;
     }
 
     .sc-month {
-
+        height: 85%;
     }
 
     .schedule-window__time-frames--day {

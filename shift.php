@@ -77,6 +77,10 @@
 //    }
 //
 
+    $total_needed = 10;
+    $people_signed = 5;
+    $people_needed = 5;
+
 $full = false;
 
 $height = 120;
@@ -88,21 +92,21 @@ $full_display = $full ? "sf" : "snf";
 $css_classes = "sh-$height st-$from_top sw-$width_value sl-$width_value-$slot_from_left $full_display";
 ?>
 
-    <div class="<?= $css_classes ?> shift__container shift__container--<?= $team_id ?>">
+    <div class="<?= $css_classes ?> shift__container">
         <div class="shift__from-last">&udhar;</div>
         <div class="shift__info shift__info--needed"><?= $total_needed ?></div>
         <div class="shift__info shift__info--scheduled">&check; <?= $people_signed ?></div>
         <div class="shift__info shift__info--scheduled">&tritime; <?= $people_needed ?></div>
     </div>
 
-    <div class="<?= $css_classes ?> shift__container shift__container--hover">
-        <div class="shift__info">Team: <?= $team_name ?></div>
-        <div class="shift__info">Scheduler: <?= $scheduler ?></div>
-        <div class="shift__info">Shift start:<?= $shift_start ?></div>
-        <div class="shift__info">Shift end: <?= $shift_end ?></div>
-        <div class="shift__info shift__info--needed">Total needed: <?= $total_needed ?></div>
-        <div class="shift__info shift__info--scheduled">Helpers confirmed: <?= $people_signed ?></div>
-        <div class="shift__info shift__info--scheduled">Helpers needed: <?= $people_needed ?></div>
-    </div>
+<!--    <div class="--><?//= $css_classes ?><!-- shift__container shift__container--hover">-->
+<!--        <div class="shift__info">Team: --><?//= $team_name ?><!--</div>-->
+<!--        <div class="shift__info">Scheduler: --><?//= $scheduler ?><!--</div>-->
+<!--        <div class="shift__info">Shift start:--><?//= $shift_start ?><!--</div>-->
+<!--        <div class="shift__info">Shift end: --><?//= $shift_end ?><!--</div>-->
+<!--        <div class="shift__info shift__info--needed">Total needed: --><?//= $total_needed ?><!--</div>-->
+<!--        <div class="shift__info shift__info--scheduled">Helpers confirmed: --><?//= $people_signed ?><!--</div>-->
+<!--        <div class="shift__info shift__info--scheduled">Helpers needed: --><?//= $people_needed ?><!--</div>-->
+<!--    </div>-->
 
 <?php //}

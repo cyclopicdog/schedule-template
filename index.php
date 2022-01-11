@@ -1,7 +1,4 @@
 <?php
-include_once (__FILE__ . '/core/controller.class.php');
-var_dump($data);
-echo "Hello handsome";
 
 //$shift_data = [
 //    [
@@ -58,47 +55,9 @@ echo "Hello handsome";
 
 ?>
 
-<div class="row margin-for-topmenu" id="main_content">
-    <div class="col-lg-12">
-        <div class="box">
-            <div class="box-header with-border  ">
-                <h3 class="box-title">Vagtplan for <?=$data['info']['areaname'].' '.$data['info']['areadescript']?></h3>
-                <div class="pull-right">
-                    <?php
-                    if ( $data['useradmin'] ) {
-                        /*
-                        ?>
-                        <div class="pull-right">
-                            <select name="year" class="form-control" id="yearswitch">
-                                <?php foreach($data['years'] as $year) : ?>
-                                    <option value="<?php echo $year['eventyear'] ?>" <?php echo (int)$year['eventyear'] === $data['eventyear'] ? 'selected' : '' ?>><?php echo $year['eventyear'] ?></option>
-                                <?php endforeach; ?>
-                            </select>
-                        </div>
-                        */ ?>
-                        <button class="btn btn-primary btn-flat" data-food-tickets="<?=$data['info']['rowid']?>">
-                            <i class="fa fa-ticket"></i>
-                            Lås og tildel madbilletter
-                        </button>
-                        <button class="btn btn-info btn-flat createschedule" id="<?=$data['info']['rowid']?>" title="Opret Vagt"><i class="fa fa-calendar-plus-o"></i>Opret Vagt</button>
-
-                    <?php
-                    }
-                    ?>
-                    <a class="btn btn-default btn-flat" href="/schedules/team_print/<?=$data['info']['rowid']?>">
-                        <i class="fa fa-print"></i>
-                        Print
-                    </a>
-                    <a class="btn btn-default btn-flat" href="/schedules/team_excel/<?=$data['info']['rowid']?>">
-                        <i class="fa fa-file-excel-o"></i>
-                        Sheet
-                    </a>
-                </div>
-            </div>
-
-
 <!-- schedule box starts here -->
 
+<main class="test-body">
 
             <?php
             include 'temp-css/schedule_holder_style.php';
@@ -106,23 +65,23 @@ echo "Hello handsome";
             include_once 'view_control.php';
             ?>
 
-            <div class="box-body box-body-schedule-mod" id="schedule-holder" >
 
-                <?php
+        <div class="box-body box-body-schedule-mod" id="schedule-holder">
 
-                    // TODO write logic to select day/week/month
+            <?php
 
-                    $calendar_date_selected = '2022-01-07';
+            // TODO write logic to select day/week/month
 
-                    $view = "5";
+            $calendar_date_selected = '2022-01-07';
 
-                    include 'schedule_day_container.php';
+            $view = "month";
 
-                ?>
+            include 'schedule_day_container.php';
 
-            </div>
+            ?>
 
         </div>
-    </div>
-</div>
+    </main>
+
+
 

@@ -2,7 +2,7 @@
 if($view == "month")
 {
     $month_title = "st-month";
-    $month_container = "sc-months";
+    $month_container = "sc-month";
     $slot_border = "slots-month";
 
 } else {
@@ -30,7 +30,7 @@ if($view == "month")
 <div class="schedule-window__schedule">
 
     <div class="schedule-window__title  <?= $month_title ?>"> Day - date</div>
-    <div class="schedule-window__slots-container <?php $month_container ?>">
+    <div class="schedule-window__slots-container <?= $month_container ?>">
         <div class="schedule-window__schedule-slots <?= $slot_border ?>"></div>
         <div class="schedule-window__schedule-slots <?= $slot_border ?>"></div>
         <div class="schedule-window__schedule-slots <?= $slot_border ?>"></div>
